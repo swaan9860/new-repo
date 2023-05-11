@@ -1,0 +1,33 @@
+Open xamPP
+start mysql
+open shell
+type"mysql -u root -p press enter"
+on password press enter
+show databases;
+create database "name";
+use "name";
+create table student(id varchar(10), name varchar(20), address varchar(50));
+desc student;
+show tables;
+insert into student values('420', 'John Wick', 'Boston');
+repeat for another row
+select * from student;
+update student set address='vatican' where id ='420';
+select * from student;
+delete from student where id='id';
+select * from student;
+alter table student add column mobileno int;
+select * from student;
+update student set mobileno=9800000000;
+alter table student drop column mobileno;
+desc student;
+select * from student;
+alter table student add column marks float;
+select * from student;
+
+update student set marks=260 where id='222'; 
+x3
+select * from student;
+
+select sum(marks), avg(marks), min(marks), max(marks) from student;
+select * from student;

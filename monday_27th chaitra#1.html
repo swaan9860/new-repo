@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hello World</title>
+	</head>
+<body>
+	<script>
+		obj1=new User("Swaan", "Maharjan", "password"); //creating object instance
+		obj1.showUser(); //calling object's function
+
+		function User(firstname, username, password) //this is a class
+		{
+			this.firstname=firstname
+			this.username=username
+			this.password=password
+
+			//user.prototype.showUser=function()
+
+			this.showUser=function()
+			{
+				document.write("firstname " + this.firstname + "<br />")
+				document.write("username " + this.username + "<br />")
+				document.write("password " + this.password + "<br />")
+			}
+		}
+	</script>
+</body>
+</html>

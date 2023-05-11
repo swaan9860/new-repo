@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Cookies(Student Form)</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone"><br><br>
+        
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="Others" name="gender" value="Others">
+        <label for="Others">Others</label><br><br>
+        
+        <label for="courses">Courses:</label>
+        <input type="checkbox" id="maths" name="courses" value="maths">
+        <label for="maths">Maths</label>
+        <input type="checkbox" id="science" name="courses" value="science">
+        <label for="science">Science</label>
+        <input type="checkbox" id="Accounts" name="courses" value="Accounts">
+        <label for="Accounts">Accounts</label><br><br>
+        
+        <input type="submit" value="Submit" onclick="alertFormValues()">
+    </form>
+    
+    <script>
+        function alertFormValues() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const courses = [];
+            document.querySelectorAll('input[name="courses"]:checked').forEach(function(course) {
+                courses.push(course.value);
+            });
+            alert("Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\nGender: " + gender + "\nCourses: " + courses.join(" , "));
+        }
+        
+        const checkboxes = document.getElementsByName("courses");
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener("change", function() {
+                if (this.checked) {
+                    alert("Selected Course: " + this.value);
+                }
+            });
+        });
+        
+        const radios = document.getElementsByName("gender");
+        radios.forEach(function(radio) {
+            radio.addEventListener("change", function() {
+                if (this.checked) {
+                    alert("Selected Gender: " + this.value);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

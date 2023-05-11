@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>
+		Select an option and submit.
+	</p>
+	Gender:
+		<input type="radio" name="Gender" value="Male">Male
+		<input type="radio" name="Gender" value="Female">Female
+		<input type="radio" name="Gender" value="Others">Others
+		<br>
+		<button type="button" onclick="displayRadiovalue()">
+			Submit
+		</button>
+		order pizza? :<input type="checkbox" id="pizzabox"><br>
+		<br>
+		<div id="result"></div>
+	<script>
+
+	function displayRadioValue() {
+	var pizza = document.getElementById("pizzabox");
+		if (pizza.checked) {
+		alert("your pizza will be delivered shortly");
+		}
+			var element = document.getElementsByName('Gender');
+			
+			for (i=0; i<element.length; i++) {
+				if(element[i],checked)
+					alert("Gender: "+element[i].value);
+			}
+		}
+
+
+	</script>
+</body>
+</html>
