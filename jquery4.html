@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> The jQuery example</title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery-ui.js" language="javascript">
+	</script>
+	<script type="text/javascript" src="jquery-ui.min.js" language="javascript">
+		$(function(){
+			$("#draggable").draggable();
+		});
+	</script>
+	<style>
+	#draggable {
+		width: 150px;
+		height: 150px;
+		padding: 0.5cm;
+	}
+	.back{
+		background-color: lightblue;
+		width: 50px;
+		padding: 25px;
+		boarder: 25px solid blue;
+		margin: 25px;
+	}
+</style>
+</head>
+<body>
+	<div id = "draggable" class="ui-widget-content">
+		<p class = "back">Drag</p>
+	</div>
+</body>
+</html>

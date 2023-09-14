@@ -1,4 +1,4 @@
-<scrip>
+<script>
     var page="news";
     switch (page)
         (
